@@ -16,17 +16,21 @@
 <table class="table table-bordered table-primary w-4">
     <thead>
     <tr>
+        <th>#</th>
         <th>Vardas Pavarde</th>
         <th>Profesija</th>
     </tr>
     </thead>
     @foreach($workers as $worker)
     <tr>
-        <th>{{$worker->full_name}}</th>
-        <th>{{$worker->role}}</th>
+<td>{{$worker->id}}</td>
+        <td>{{$worker->full_name}}</td>
+        <td>{{$worker->role}}</td>
     </tr>
     @endforeach
 </table>
+
+<br>
 
 
 

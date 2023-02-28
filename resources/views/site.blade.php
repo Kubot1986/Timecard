@@ -5,7 +5,7 @@
 <header class="py-5 bg-light border-bottom mb-4">
     <div class="container">
         <div class="text-center my-5">
-            <h1 class="fw-bolder">Welcome workers page!</h1>
+            <h1 class="fw-bolder">Welcome to sites page!</h1>
 
         </div>
     </div>
@@ -14,20 +14,22 @@
 <div class="container">
     <div class="row">
         <!-- Blog entries-->
-        <h1>Workers:</h1>
+        <h1>Construction sites:</h1>
         <table class="table table-bordered table-primary w-4">
             <thead>
             <tr>
                 <th>#</th>
-                <th>Vardas Pavarde</th>
-                <th>Profesija</th>
+                <th>Site name</th>
+                <th>Site started</th>
+                <th>Site finished</th>
             </tr>
             </thead>
-            @foreach($workers as $worker)
+            @foreach($sites as $site)
                 <tr>
-                    <td>{{$worker->id}}</td>
-                    <td>{{$worker->full_name}}</td>
-                    <td>{{$worker->role}}</td>
+                    <td>{{$site->id}}</td>
+                    <td>{{$site->site_name}}</td>
+                    <td>{{$site->site_start_date}}</td>
+                    <td>{{$site->site_end_date}}</td>
                 </tr>
             @endforeach
         </table>

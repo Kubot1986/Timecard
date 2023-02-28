@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\WorkerController::class,'index'])
     ->name('index');
-Route::view('/worker', 'worker')->name('worker');
-Route::view('/object', 'object')->name('object');
+Route::get('/worker',[\App\Http\Controllers\WorkerController::class,'worker'])->name('worker');
+Route::get('/site',[\App\Http\Controllers\SiteController::class,'site'])->name('site');
 Route::view('/timecard', 'timecard')->name('timecard');
 
 
