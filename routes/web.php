@@ -13,9 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\WorkerController::class,'index'])
+    ->name('index');
+Route::view('/worker', 'worker')->name('worker');
+Route::view('/object', 'object')->name('object');
+Route::view('/timecard', 'timecard')->name('timecard');
+
+
 
 Route::get('/create_user', function () {
     echo "create user";
@@ -29,9 +33,7 @@ Route::get('/create_object', function () {
 Route::post('/save_created_object', function () {
     echo "save created object";
 });
-Route::get('/timecard', function () {
-    echo "timecard";
-});
+
 Route::post('/save_timecard', function () {
     echo "save timecard";
 });
